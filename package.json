@@ -8,6 +8,10 @@
   },
   "author": "Joe Osborne",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.cms.gov/CMSGov/selenium-reporter"
+  },
   "dependencies": {
     "selenium-webdriver": "2.41.0",
     "graceful-fs": "2.0.3",
