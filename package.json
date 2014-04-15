@@ -1,0 +1,14 @@
+{
+  "name": "selenium-reporter",
+  "version": "0.0.0",
+  "description": "Node.js application to run Selenium tests via the selenium-standalone jar and report in XML for consumption in JUnit",
+  "main": "bin/selenium-reporter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe Osborne",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "2.41.0"
+  }
+}
