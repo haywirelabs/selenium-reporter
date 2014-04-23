@@ -1,3 +1,16 @@
+var assert = require('assert');
+var fs = require('graceful-fs')
+var webdriver = require('selenium-webdriver');
+var SeleniumServer = require('selenium-webdriver/remote').SeleniumServer;
+var test = require('selenium-webdriver/testing');
+var pathToSeleniumJar = 'server/selenium-server-standalone-2.41.0.jar';
+
+var server = new SeleniumServer(pathToSeleniumJar, {
+  port: 4444
+});
+
+server.start();
+
 test.describe('Google Search', function() {
   var driver;
 
@@ -13,7 +26,7 @@ test.describe('Google Search', function() {
     driver.findElement(webdriver.By.name('btnG')).click();
     driver.wait(function() {
       return driver.getTitle().then(function(title) {
-        return 'webdriver - Google Searcho' === title;
+        return 'webdriver - Google Search' === title;
       });
     }, 1000);
   });
