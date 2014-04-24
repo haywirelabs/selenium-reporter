@@ -7,3 +7,5 @@ Usage
 -----
 
 ``` mocha bin/selenium-reporter.js ```
+
+``` npm run-script bamboo ```
