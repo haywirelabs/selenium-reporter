@@ -4,6 +4,7 @@ var webdriver = require('selenium-webdriver');
 var SeleniumServer = require('selenium-webdriver/remote').SeleniumServer;
 var test = require('selenium-webdriver/testing');
 var pathToSeleniumJar = 'server/selenium-server-standalone-2.41.0.jar';
+var homepageUrl = 'https://dev.healthcare.gov/?ACA=9xCVchyHgWzc';
 
 var server = new SeleniumServer(pathToSeleniumJar, {
   port: 4444
@@ -11,7 +12,7 @@ var server = new SeleniumServer(pathToSeleniumJar, {
 
 server.start();
 
-test.describe('Google Search', function() {
+test.describe('Healthcare Test', function() {
   var driver;
 
   test.before(function() {
@@ -20,16 +21,15 @@ test.describe('Google Search', function() {
         build();
   });
 
-  test.it('should append query to title', function() {
-    driver.get('http://www.google.com');
-    driver.findElement(webdriver.By.name('q')).sendKeys('webdriver');
-    driver.findElement(webdriver.By.name('btnG')).click();
+  test.it('should have the proper healthcare title on the home page', function() {
+    driver.get(homepageUrl);
     driver.wait(function() {
       return driver.getTitle().then(function(title) {
-        return 'webdriver - Google Search' === title;
+        return 'Health Insurance Marketplace, Affordable Care Act | HealthCare.gov' === title;
       });
-    }, 1000);
+    }, 3000);
   });
+
 
   test.after(function() { driver.quit(); });
 });
