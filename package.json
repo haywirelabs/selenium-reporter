@@ -16,6 +16,10 @@
     "selenium-webdriver": "2.41.0",
     "graceful-fs": "2.0.3",
     "mocha": "1.18.2",
+    "mocha-bamboo-reporter": "*",
     "chai": "1.9.1"
+  },
+  "scripts": {
+    "bamboo": "node node_modules/mocha/bin/mocha -R mocha-bamboo-reporter"
   }
 }
