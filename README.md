@@ -14,3 +14,7 @@ Run mocha tests with mocha-bamboo-reporter
 ``` npm run-script bamboo ```
 
 *running this will produce a mocha.json file containing the unit test results*
+
+Installation Note
+-----------------
+ZAP requires a minimum of Java 7 to run
