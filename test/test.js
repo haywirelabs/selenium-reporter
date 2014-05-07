@@ -9,7 +9,8 @@ var pathToZapJar = 'server/zap/ZAP_2.3.0.1/zap.jar';
 var pathToZapSh = 'server/zap/ZAP_2.3.0.1/zap.sh';
 
 var server = new SeleniumServer(pathToSeleniumJar, {
-  port: 4444
+  port: 4444,
+  proxyPort: 9083
 });
 
 server.start();
@@ -29,7 +30,7 @@ test.describe('Healthcare Test', function() {
       return driver.getTitle().then(function(title) {
         return 'Health Insurance Marketplace, Affordable Care Act | HealthCare.gov' === title;
       });
-    }, 3000);
+    }, 9000);
   });
 
 
