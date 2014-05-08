@@ -28,7 +28,7 @@ test.describe('Healthcare Test', function() {
       return driver.getTitle().then(function(title) {
         return 'Health Insurance Marketplace, Affordable Care Act | HealthCare.gov' === title;
       });
-    }, 9000);
+    }, 3000);
   });
 
 
