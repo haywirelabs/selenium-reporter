@@ -1,10 +1,17 @@
+if (process.argv[3] === "--location"){
+  var target_location = process.argv[4];
+}
+else{
+  return "Location is not defined.";
+}
+
 var assert = require('assert');
 var fs = require('graceful-fs')
 var webdriver = require('selenium-webdriver');
 var SeleniumServer = require('selenium-webdriver/remote').SeleniumServer;
 var test = require('selenium-webdriver/testing');
 var pathToSeleniumJar = 'server/selenium-server-standalone-2.41.0.jar';
-var homepageUrl = 'https://dev.healthcare.gov/?ACA=9xCVchyHgWzc';
+var homepageUrl = target_location;
 
 var server = new SeleniumServer(pathToSeleniumJar, {
   port: 4444,

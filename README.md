@@ -7,11 +7,7 @@ Usage
 -----
 Run basic mocha tests
 
-``` mocha bin/selenium-reporter.js ```
-
-Run mocha tests with mocha-bamboo-reporter
-
-``` npm run-script bamboo ```
+``` node node_modules/mocha/bin/mocha bin/selenium-reporter.js --location http://localhost:8000 -R mocha-bamboo-reporter ```
 
 *running this will produce a mocha.json file containing the unit test results*
 

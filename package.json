@@ -17,7 +17,8 @@
     "graceful-fs": "2.0.3",
     "mocha": "1.18.2",
     "mocha-bamboo-reporter": "*",
-    "chai": "1.9.1"
+    "chai": "1.9.1",
+    "argparse": "0.1.15"
   },
   "scripts": {
     "bamboo": "node node_modules/mocha/bin/mocha -R mocha-bamboo-reporter"
