@@ -1,3 +1,5 @@
+//Argument Parser
+//Cannot use argparse here as the selenium reporter runs as a mocha application and use of argparse conflict with mocha.  Using process.argv for now to pass in the target url.
 if (process.argv[3] === "--location"){
   var target_location = process.argv[4];
 }
